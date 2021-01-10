@@ -1,0 +1,28 @@
+version: '3.1'
+
+services: 
+
+  cache: 
+    
+    image: gitblit/gitblit:1.9.1
+    restart: always
+
+    container_name: gitblit
+    ports: 
+      - "10006:8080"
+      #- "10007:8443"
+      #- "10007:9418"
+      # "10007:29418"
+    volumes: 
+      - "./conf:/var/opt/gitblit/etc"
+      - "./repos:/var/opt/gitblit/srv"
+    
+    
+
+
+
+
+
+
+
+
