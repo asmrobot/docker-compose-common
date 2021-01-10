@@ -1,0 +1,30 @@
+version: '3.1'
+
+services: 
+
+  db: 
+    # image: mysql:5.7
+    image: image_name:1.0.1
+    build: 
+      context: ./
+      dockerfile: ./Dockerfile
+    command: --default-authentication-plugin=mysql_native_password 
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 283965069
+      MYSQL_DATABASE: db——name
+    container_name: container_name
+    ports: 
+      - "3306:3306"
+    volumes: 
+      - "./datas:/var/lib/mysql"
+    
+    
+
+
+
+
+
+
+
+
